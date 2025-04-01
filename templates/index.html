@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Data Literacy Forum</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Data Literacy Forum</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('topics') }}">Topics</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('comments') }}">Comments</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Discover Knowledge by Topic</h2>
+            <p>This platform helps you explore various topics like Health, Education, and Technology.</p>
+            <p>Visit the topics page to get started.</p>
+            <a href="{{ url_for('topics') }}" class="btn">Explore Topics</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; {{ datetime.utcnow().year }} Data Literacy Forum. All rights reserved.</p>
+    </footer>
+</body>
+</html>

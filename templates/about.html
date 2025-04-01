@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Data Literacy Forum</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>About Data Literacy Forum</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('topics') }}">Topics</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('comments') }}">Comments</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Our Mission</h2>
+            <p>Data Literacy Forum is a platform dedicated to bridging the knowledge gap between technical professionals and non-technical stakeholders, especially in healthcare and education sectors.</p>
+
+            <h2>What We Offer</h2>
+            <ul style="list-style: inside; text-align: left; max-width: 800px; margin: 0 auto;">
+                <li>Topic-based knowledge sharing</li>
+                <li>Organized research findings</li>
+                <li>Commentary and community discussion</li>
+                <li>Support for building data literacy awareness</li>
+            </ul>
+
+            <h2>Why It Matters</h2>
+            <p>Understanding data is no longer optional. Our goal is to empower individuals and organizations with the clarity and confidence to navigate data-driven environments.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; {{ datetime.utcnow().year }} Data Literacy Forum. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
