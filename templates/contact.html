@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Data Literacy Forum</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('topics') }}">Topics</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('comments') }}">Comments</a>
+        </nav>
+    </header>
+
+    <main>
+        <section style="max-width: 600px; margin: auto;">
+            <form action="{{ url_for('contact') }}" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; {{ datetime.utcnow().year }} Data Literacy Forum. All rights reserved.</p>
+    </footer>
+</body>
+</html>
