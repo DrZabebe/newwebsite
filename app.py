@@ -45,7 +45,6 @@ def topic_detail(name):
                            datetime=datetime.now())
 
 
-
 @app.route('/comments', methods=['GET', 'POST'])
 def comments():
     if request.method == 'POST':
