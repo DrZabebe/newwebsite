@@ -2,70 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Healthcare Meets AI Innovation</title>
+    <title>Breaking Barriers to AI in Primary Care</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <header>
 
-          <!-- Header Text -->
-     <!--   <h1>Welcome to Where Healthcare Meets AI Innovation</h1> -->
+<header class="home-header">
+    <div class="header-content">
+        <h1 class="header-title">🚀 Breaking Barriers to AI in Primary Care</h1>
+        <p class="home-subtitle">Together, bridging the gap between technology and human-centered healthcare.</p>
+    </div>
 
-        <!-- Navigation Menu -->
-
-        <div class="menu-container">
-            <div class="hamburger" id="hamburger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav id="nav-menu">
-                <a href="{{ url_for('home') }}">Home</a>
-                <a href="{{ url_for('about') }}">About</a>
-                <a href="{{ url_for('topics') }}">Topics</a>
-                <!-- <a href="{{ url_for('contact') }}">Contact</a> -->
-                <!-- <a href="{{ url_for('comments') }}">Comments</a> -->
-            </nav>
+    <div class="menu-container sticky-menu">
+        <div class="hamburger" id="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </header>
+        <nav id="nav-menu">
+            <a href="{{ url_for('home') }}">🏠 Home</a>
+            <a href="{{ url_for('about') }}">💬 About</a>
+            <a href="{{ url_for('topics') }}">📚 Topics</a>
+        </nav>
+        <!-- 🌗 Dark Mode Toggle Button -->
+        <button id="theme-toggle" aria-label="Toggle dark mode" style="margin-left: 20px; padding: 6px 12px; border-radius: 5px; border: none; background-color: var(--card-bg); color: var(--text-color); cursor: pointer;">
+            🌓
+        </button>
+    </div>
+</header>
 
-    <script>
-        // JavaScript to toggle the hamburger menu
-        document.getElementById('hamburger-icon').addEventListener('click', function() {
-            const menu = document.getElementById('nav-menu');
-            const hamburger = document.getElementById('hamburger-icon');
+<main class="home-page">
 
-            // Toggle the 'active' class to show the menu
-            menu.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-    </script>
-
-
-   <main>
-    <section style="text-align: left;">
-        <h2>Welcome to Where Healthcare Meets AI Innovation</h2>
-        <p>At the intersection of healthcare and artificial intelligence, we are dedicated to transforming primary care with cutting-edge AI solutions. Our mission is simple: to bridge the gap between advanced technology and human-centered care by addressing the barriers that primary care physicians (PCPs) face daily in AI adoption.</p>
-
-        <h3>The Promise of AI in Healthcare</h3>
-        <p>AI has the potential to revolutionize healthcare by enhancing diagnostic accuracy, streamlining clinical workflows, and supporting decision-making. However, its integration into primary care has been slow due to human-related challenges, including trust, training, and professional autonomy.</p>
-
-        <h3>Our Approach: Empowering Healthcare Professionals</h3>
-        <p>We understand that AI adoption is not just about technology – it's about people. Our platform provides a comprehensive approach that combines research-based insights, practical strategies, and a collaborative environment to empower healthcare professionals. We help you navigate the complexities of AI integration in a way that respects your workflow, enhances your autonomy, and builds trust.</p>
-
-        <ul>
-            <li><strong>Build Trust with AI:</strong> Discover how transparency, explainability, and ethical AI design can improve confidence in technology.</li>
-            <li><strong>Enhance Professional Autonomy:</strong> Learn how AI can support your clinical judgment without compromising your decision-making authority.</li>
-            <li><strong>Transform Training and Adoption:</strong> Access tools and resources that reduce the learning curve, making AI intuitive and easy to incorporate into your practice.</li>
-        </ul>
-
-        <h3>Join Us in Shaping the Future of Healthcare</h3>
-        <p>Explore our resources, connect with AI experts, and find solutions that not only improve your practice but also enhance patient outcomes. Together, we can build a future where technology works alongside healthcare providers to create more effective, compassionate, and personalized care.</p>
+    <section class="hero">
+        <h2>🌟 Our Mission</h2>
+        <p>We bring together primary care physicians, IT developers, educational institutions, and policymakers to remove the barriers slowing AI adoption in healthcare.</p>
     </section>
+
+    <section class="why-platform">
+        <h2>🔍 Why This Platform Exists</h2>
+        <p>Despite AI’s promise, adoption remains slow. Trust, training gaps, workflow disruption, and policy uncertainty stand in the way.
+        We combine research, community knowledge, and practical tools to empower real adoption — with people at the center, not technology alone.</p>
+    </section>
+
+    <section class="who-for">
+        <h2>🤝 Who This Platform Serves</h2>
+        <div class="columns">
+            <div class="card">
+                <h3>🖥️ IT Developers</h3>
+                <p class="home-paragraph"> Build healthcare AI solutions that truly fit clinical workflows and earn trust.</p>
+            </div>
+            <div class="card">
+                <h3>🎓 Educational Institutions</h3>
+                <p class="home-paragraph"> Equip the next generation of healthcare professionals with AI literacy and leadership skills.</p>
+            </div>
+            <div class="card">
+                <h3>🏛️ Policymakers</h3>
+                <p class="home-paragraph"> Create smart policies that protect patients, empower clinicians, and foster innovation.</p>
+            </div>
+            <div class="card">
+                <h3>🩺 Primary Care Physicians</h3>
+                <p class="home-paragraph"> Gain the tools, trust, and training needed to integrate AI into daily patient care confidently.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-we-help">
+        <h2>🛠️ How We Help</h2>
+        <ul>
+            <li>📚 Provide research-based insights into barriers and solutions</li>
+            <li>⚙️ Offer practical toolkits, templates, and AI integration guides</li>
+            <li>🌐 Build a collaborative community across professions</li>
+            <li>🎯 Focus on ethical, explainable, human-centered AI design</li>
+        </ul>
+    </section>
+
+    <section class="call-to-action">
+        <h2>🚀 Ready to Shape the Future?</h2>
+        <p class="home-paragraph"> Explore topics, connect with experts, and lead the change in primary care AI adoption.</p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('about') }}" class="btn-secondary">Learn More About Us 🔎</a>
+        </div>
+    </section>
+
 </main>
 
-    <footer>
-        <p>&copy; {{ datetime.utcnow().year }} Zelalem Abebe. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>&copy; {{ datetime.utcnow().year }} Zelalem Abebe. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+    // Hamburger menu toggle
+    document.getElementById('hamburger-icon').addEventListener('click', function() {
+        const menu = document.getElementById('nav-menu');
+        const hamburger = document.getElementById('hamburger-icon');
+        menu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    // Dark mode toggle
+    const toggleButton = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    function setTheme(theme) {
+        htmlElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }
+
+    function toggleTheme() {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+    }
+
+    toggleButton.addEventListener('click', toggleTheme);
+
+    (function () {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            setTheme(prefersDark ? 'dark' : 'light');
+        }
+    })();
+</script>
+
 </body>
 </html>
